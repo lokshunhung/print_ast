@@ -40,7 +40,8 @@ void analyzeOneFile(AnalysisContext context, String path) {
   buffer.clear();
   AstWriter(buffer).visitCompilationUnit(parsedUnitResult.unit);
   final file = File(p.absolute('out/index.html'));
-  file.writeAsStringSync(buffer.toString());
+  file.writeAsStringSync(
+      '<style> * { font-family: monospace; } </style>\n' + buffer.toString());
   print('');
 
   print('>>>');
