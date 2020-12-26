@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "scripts": {
+    "start": "pub run dhttpd --path out",
+    "parse": "pub run print_ast"
+  }
+}
